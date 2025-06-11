@@ -1,0 +1,54 @@
+/* Responsif mobile */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead tr {
+    display: none; /* sembunyikan header tabel di mobile */
+  }
+
+  tbody tr {
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  tbody td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #6b7280;
+    white-space: nowrap;
+  }
+
+  td.aksi {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  td.aksi button {
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+  }
+}
